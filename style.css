@@ -1,0 +1,75 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  height: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 300;
+  margin: 0;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 200;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+header,
+footer,
+.content>* {
+  background-color: #cccccc;
+  padding: 10px;
+  margin: 5px;
+}
+
+main {
+  flex: 1;
+}
+
+.content {
+  flex: 0;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas:
+    "opt1"
+    "opt2"
+    "opt3"
+    "opt4";
+}
+
+.opt1 {
+  grid-area: opt1;
+}
+
+.opt2 {
+  grid-area: opt2;
+}
+
+.opt3 {
+  grid-area: opt3;
+}
+
+.opt4 {
+  grid-area: opt4;
+}
+
+@media all and (min-width: 481px) {
+  .content {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "opt1 opt2 opt3"
+      "opt1 opt4 opt3"
+  }
+}
