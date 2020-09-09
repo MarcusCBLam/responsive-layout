@@ -67,7 +67,7 @@ main {
 
 @media all and (min-width: 481px) {
   .content {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       "opt1 opt2 opt3"
       "opt1 opt4 opt3"
